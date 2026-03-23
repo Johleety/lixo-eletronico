@@ -344,3 +344,29 @@ body {
         font-size: 1.1rem;
     }
 }
+
+.mapa-placeholder {
+    background: var(--verde-escuro);
+    border-radius: 16px;
+    padding: 40px 30px;
+    color: var(--branco);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 200px;
+}
+
+.icone-mapa-placeholder {
+    font-size: 3rem;
+    color: var(--verde-claro);
+    display: block;
+    margin-bottom: 15px;
+}
+
+.icone-mapa-placeholder {
+    font-size: 5rem;
+    color: var(--verde-claro);
+    display: block;
+    margin-bottom: 20px;
+}
