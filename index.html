@@ -17,22 +17,237 @@
 <body>
 
     <!-- MENU -->
-    <nav id="menu"></nav>
+<nav class="navbar navbar-expand-lg fixed-top" id="menu">
+    <div class="container">
+
+        <!-- Logo -->
+        <a class="navbar-brand" href="#inicio">
+            <i class="bi bi-recycle"></i> Descarte Certo
+        </a>
+
+        <!-- Botão mobile (hamburguer) -->
+        <button class="navbar-toggler" type="button" 
+                data-bs-toggle="collapse" 
+                data-bs-target="#navbarMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Links do menu -->
+        <div class="collapse navbar-collapse" id="navbarMenu">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#inicio">Início</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#por-que">Por que Reciclar?</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#como-descartar">Como Descartar?</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#doe-descarte">Doe ou Descarte</a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</nav>
 
     <!-- HERO -->
-    <section id="inicio"></section>
+<section id="inicio" class="hero d-flex align-items-center">
+    <div class="container">
+        <div class="row align-items-center">
+
+            <!-- Texto -->
+            <div class="col-lg-6">
+                <h1 class="hero-titulo">
+                    Descarte Consciente de <span>Lixo Eletrônico</span>
+                </h1>
+                <p class="hero-subtitulo">
+                    Preserve o planeta. Saiba como descartar corretamente 
+                    seus eletrônicos em Atibaia.
+                </p>
+                <a href="#doe-descarte" class="btn btn-hero">
+                    <i class="bi bi-geo-alt-fill"></i> 
+                    Encontre um Ponto de Coleta
+                </a>
+            </div>
+
+            <!-- Ícone decorativo -->
+            <div class="col-lg-6 text-center d-none d-lg-block">
+                <i class="bi bi-recycle icone-hero"></i>
+            </div>
+
+        </div>
+    </div>
+</section>
 
     <!-- POR QUE RECICLAR -->
-    <section id="por-que"></section>
+<section id="por-que" class="secao-clara">
+    <div class="container">
+
+        <h2 class="titulo-secao text-center">Por que Reciclar E-Lixo?</h2>
+        <p class="subtitulo-secao text-center">
+            O lixo eletrônico é um dos resíduos que mais cresce no mundo. 
+            Descartar corretamente faz toda a diferença.
+        </p>
+
+        <div class="row mt-5 g-4">
+
+            <div class="col-md-4">
+                <div class="card-info text-center">
+                    <i class="bi bi-exclamation-triangle-fill icone-card"></i>
+                    <h5>Substâncias Tóxicas</h5>
+                    <p>Equipamentos eletrônicos contêm chumbo, mercúrio e cádmio 
+                    que contaminam o solo e a água quando descartados incorretamente.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card-info text-center">
+                    <i class="bi bi-arrow-repeat icone-card"></i>
+                    <h5>Materiais Recuperáveis</h5>
+                    <p>Ouro, prata, cobre e alumínio presentes nos eletrônicos 
+                    podem ser recuperados e reutilizados na indústria.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card-info text-center">
+                    <i class="bi bi-globe-americas icone-card"></i>
+                    <h5>Impacto Global</h5>
+                    <p>O Brasil é um dos maiores geradores de lixo eletrônico 
+                    da América Latina. Cada atitude conta para mudar esse cenário.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
 
     <!-- COMO DESCARTAR -->
-    <section id="como-descartar"></section>
+<section id="como-descartar" class="secao-escura">
+    <div class="container">
+
+        <h2 class="titulo-secao text-center">Como Descartar seu E-Lixo?</h2>
+        <p class="subtitulo-secao text-center">
+            Simples, rápido e responsável. Veja o caminho certo!
+        </p>
+
+        <div class="row mt-5 g-4">
+
+            <div class="col-md-3">
+                <div class="card-passo text-center">
+                    <div class="numero-passo">1</div>
+                    <i class="bi bi-laptop icone-passo"></i>
+                    <h5>Separe o E-Lixo</h5>
+                    <p>Reúna celulares, cabos, computadores e outros eletrônicos 
+                    que não usa mais.</p>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card-passo text-center">
+                    <div class="numero-passo">2</div>
+                    <i class="bi bi-geo-alt icone-passo"></i>
+                    <h5>Localize um Ponto</h5>
+                    <p>Use nosso mapa para encontrar o ponto de coleta 
+                    mais próximo de você em Atibaia.</p>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card-passo text-center">
+                    <div class="numero-passo">3</div>
+                    <i class="bi bi-truck icone-passo"></i>
+                    <h5>Leve ao Local</h5>
+                    <p>Entregue seus eletrônicos no ponto de coleta. 
+                    É gratuito e sem burocracia.</p>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card-passo text-center">
+                    <div class="numero-passo">4</div>
+                    <i class="bi bi-recycle icone-passo"></i>
+                    <h5>Reciclagem Segura</h5>
+                    <p>Os materiais são destinados corretamente, 
+                    protegendo o meio ambien
 
     <!-- DOE OU DESCARTE -->
-    <section id="doe-descarte"></section>
+<section id="doe-descarte" class="secao-clara">
+    <div class="container">
+
+        <h2 class="titulo-secao text-center">Doe ou Descarte</h2>
+        <p class="subtitulo-secao text-center">
+            Tem eletrônicos sem uso? Encontre o ponto de coleta 
+            mais próximo de você em Atibaia e faça a diferença!
+        </p>
+
+        <div class="row mt-5 align-items-center g-4">
+
+            <!-- Texto e botão -->
+            <div class="col-lg-5 text-center">
+                <i class="bi bi-heart-fill icone-doe"></i>
+                <h4 class="mt-3">Sua doação transforma!</h4>
+                <p>Eletrônicos doados podem ser recondicionados e 
+                destinados a escolas e famílias de baixa renda, 
+                promovendo inclusão digital em Atibaia.</p>
+                <a href="https://www.google.com/maps/search/coleta+lixo+eletronico+Atibaia+SP" 
+                   target="_blank" 
+                   class="btn btn-hero mt-3">
+                    <i class="bi bi-geo-alt-fill"></i>
+                    Quero Doar ou Descartar — Ver no Mapa
+                </a>
+            </div>
+
+            <!-- Mapa incorporado -->
+            <div class="col-lg-7">
+                <div class="mapa-container">
+                    <iframe
+                        src="https://www.google.com/maps/embed/v1/search?key=AIzaSyD-placeholder&q=coleta+lixo+eletroni
 
     <!-- FOOTER -->
-    <footer id="rodape"></footer>
+<footer id="rodape" class="footer">
+    <div class="container">
+
+        <div class="row g-4">
+
+            <!-- Logo e descrição -->
+            <div class="col-md-4">
+                <h5><i class="bi bi-recycle"></i> Descarte Certo</h5>
+                <p>Conscientizando Atibaia sobre o descarte 
+                correto de lixo eletrônico.</p>
+            </div>
+
+            <!-- Links rápidos -->
+            <div class="col-md-4 text-center">
+                <h6>Links Rápidos</h6>
+                <ul class="list-unstyled">
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#por-que">Por que Reciclar?</a></li>
+                    <li><a href="#como-descartar">Como Descartar?</a></li>
+                    <li><a href="#doe-descarte">Doe ou Descarte</a></li>
+                </ul>
+            </div>
+
+            <!-- Créditos -->
+            <div class="col-md-4 text-center">
+                <h6>Projeto Acadêmico</h6>
+                <p>Desenvolvido para a disciplina de 
+                Atividades Extensionistas<br>
+                UNINTER — 2025</p>
+            </div>
+
+        </div>
+
+        <hr>
+        <p class="text-center mb-0">
+            © 2025 Descarte Certo — Todos os direitos reservados.
+        </p>
+
+    </div>
+</footer>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
