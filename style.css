@@ -252,10 +252,12 @@ body {
 }
 
 .card-passo-destaque {
-    max-width: 500px;
+    max-width: 450px;
     margin: 0 auto;
     padding: 40px;
+    margin-top: 20px;
 }
+
 /* Correção seção Doe ou Descarte */
 #doe-descarte {
     background-color: var(--bege);
@@ -304,4 +306,7 @@ body {
 
 .btn-hero {
     border-radius: 50px;
+}
+#doe-descarte {
+    margin-top: 40px;
 }
