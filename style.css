@@ -66,16 +66,17 @@ body {
 =========================== */
 .hero {
     background: linear-gradient(135deg, var(--verde-escuro), var(--verde-medio));
-    min-height: 90vh;
+    min-height: 60vh;
     color: var(--branco);
     padding: 80px 0;
 }
 
 .hero-titulo {
-    font-size: 2.8rem;
+    font-size: 2.2rem;
     font-weight: 700;
-    line-height: 1.2;
+    line-height: 1.3;
     margin-bottom: 20px;
+    white-space: nowrap;
 }
 
 .hero-titulo span {
@@ -170,7 +171,7 @@ body {
     border-radius: 16px;
     padding: 35px 20px;
     height: 100%;
-    border: 1px solid rgba(255,255,255,0.15);
+    border: 1px solid rgba(214, 89, 89, 0.514);
     transition: transform 0.3s;
 }
 
@@ -194,10 +195,14 @@ body {
 }
 
 .icone-passo {
-    font-size: 2.2rem;
-    color: var(--verde-claro);
-    margin-bottom: 12px;
     display: block;
+    font-size: 2.5rem;
+    margin-bottom: 12px;
+    transition: transform 0.3s;
+}
+
+.card-passo:hover .icone-passo {
+    transform: scale(1.2);
 }
 
 /* ===========================
@@ -250,4 +255,53 @@ body {
     max-width: 500px;
     margin: 0 auto;
     padding: 40px;
+}
+/* Correção seção Doe ou Descarte */
+#doe-descarte {
+    background-color: var(--bege);
+    color: var(--cinza-texto);
+}
+
+#doe-descarte h2,
+#doe-descarte h4,
+#doe-descarte p {
+    color: var(--cinza-texto);
+}
+
+#doe-descarte .titulo-secao {
+    color: var(--verde-escuro);
+}
+
+/* Correção ícone card passo */
+.card-passo .icone-passo {
+    display: block;
+    font-size: 2.2rem;
+    color: var(--verde-claro);
+    margin-bottom: 12px;
+}
+
+/* Menu hover legível */
+#menu .nav-link:hover {
+    color: var(--branco) !important;
+    background-color: rgba(255,255,255,0.15);
+    border-radius: 8px;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+/* Bordas mais arredondadas nos cards */
+.card-info {
+    border-radius: 24px;
+}
+
+.card-passo {
+    border-radius: 24px;
+}
+
+.card-passo-destaque {
+    border-radius: 24px;
+}
+
+.btn-hero {
+    border-radius: 50px;
 }
