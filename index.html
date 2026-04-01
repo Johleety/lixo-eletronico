@@ -7,88 +7,179 @@
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    
     <!-- Bootstrap Icons -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
-
     <!-- CSS próprio -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <!-- MENU -->
+<!-- ===================== MENU ===================== -->
 <nav class="navbar navbar-expand-lg fixed-top" id="menu">
     <div class="container">
-
-        <!-- Logo -->
         <a class="navbar-brand" href="#inicio">
             <i class="bi bi-recycle"></i> Descarte Certo
         </a>
 
-        <!-- Botão mobile (hamburguer) -->
-        <button class="navbar-toggler" type="button" 
-                data-bs-toggle="collapse" 
-                data-bs-target="#navbarMenu">
+        <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarMenu"
+                aria-controls="navbarMenu"
+                aria-expanded="false"
+                aria-label="Alternar navegação">
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <!-- Links do menu -->
         <div class="collapse navbar-collapse" id="navbarMenu">
             <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="#inicio">Início</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#por-que">Por que Reciclar?</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#como-descartar">Como Descartar?</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#doe-descarte">Doe ou Descarte</a>
-                </li>
+                <li class="nav-item"><a class="nav-link" href="#inicio">Início</a></li>
+                <li class="nav-item"><a class="nav-link" href="#por-que">Por que Reciclar?</a></li>
+                <li class="nav-item"><a class="nav-link" href="#como-descartar">Como Descartar?</a></li>
+                <li class="nav-item"><a class="nav-link" href="#doe-descarte">Doe ou Descarte</a></li>
             </ul>
         </div>
-
     </div>
 </nav>
 
-    <!-- HERO -->
-<section id="inicio" class="hero d-flex align-items-center">
+<!-- ===================== HERO ===================== -->
+<section id="inicio" class="hero">
     <div class="container">
-        <div class="row align-items-center">
+        <div class="row align-items-center g-4">
 
-            <!-- Texto -->
+            <!-- Texto e CTA -->
             <div class="col-lg-6">
                 <h1 class="hero-titulo">
                     Descarte Consciente de <span>Lixo Eletrônico</span>
                 </h1>
                 <p class="hero-subtitulo">
-                    Preserve o planeta. Saiba como descartar corretamente 
+                    Preserve o planeta. Saiba como descartar corretamente
                     seus eletrônicos em Atibaia.
                 </p>
                 <a href="#doe-descarte" class="btn btn-hero">
-                    <i class="bi bi-geo-alt-fill"></i> 
+                    <i class="bi bi-geo-alt-fill"></i>
                     Encontre um Ponto de Coleta
                 </a>
             </div>
 
-            <!-- Ícone decorativo -->
-            <div class="col-lg-6 text-center d-none d-lg-block">
-                <i class="bi bi-recycle icone-hero"></i>
-            </div>
+            <!-- Carrossel de reportagens -->
+            <div class="col-lg-6 d-none d-lg-block">
+                <p class="carrossel-label">
+                    <i class="bi bi-newspaper"></i> Reportagens em Destaque
+                </p>
+
+                <div id="carrosselReportagens" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="4500">
+
+                    <!-- Indicadores -->
+                    <div class="carousel-indicators carrossel-indicadores">
+                        <button type="button" data-bs-target="#carrosselReportagens" data-bs-slide-to="0" class="active" aria-label="Reportagem 1"></button>
+                        <button type="button" data-bs-target="#carrosselReportagens" data-bs-slide-to="1" aria-label="Reportagem 2"></button>
+                        <button type="button" data-bs-target="#carrosselReportagens" data-bs-slide-to="2" aria-label="Reportagem 3"></button>
+                        <button type="button" data-bs-target="#carrosselReportagens" data-bs-slide-to="3" aria-label="Reportagem 4"></button>
+                    </div>
+
+                    <div class="carousel-inner carrossel-inner">
+
+                        <!-- Card 1 -->
+                        <div class="carousel-item active">
+                            <a href="https://diariodocomercio.com.br/sustentabilidade/descarte-lixo-eletronico-cresce-chega-a-24-mi-toneladas-brasil/"
+                               target="_blank" rel="noopener noreferrer"
+                               class="card-reportagem">
+                                <div class="card-rep-icone">
+                                    <i class="bi bi-bar-chart-fill"></i>
+                                </div>
+                                <div class="card-rep-tag">Diário do Comércio · 2024</div>
+                                <h5 class="card-rep-titulo">Brasil gera 2,4 milhões de toneladas de lixo eletrônico em 2024</h5>
+                                <p class="card-rep-resumo">
+                                    Aumento de 15% em relação a 2020, impulsionado pelo e-commerce e pela rápida obsolescência tecnológica. Menos de 3% recebe destino adequado.
+                                </p>
+                                <span class="card-rep-link">
+                                    Ler reportagem <i class="bi bi-arrow-up-right"></i>
+                                </span>
+                            </a>
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div class="carousel-item">
+                            <a href="https://www.brasildefato.com.br/2024/12/26/brasil-e-5-pais-que-mais-gera-lixo-eletronico-mas-so-3-e-descartado-corretamente-saiba-como-fazer/"
+                               target="_blank" rel="noopener noreferrer"
+                               class="card-reportagem">
+                                <div class="card-rep-icone card-rep-icone--laranja">
+                                    <i class="bi bi-globe-americas"></i>
+                                </div>
+                                <div class="card-rep-tag">Brasil de Fato · 2024</div>
+                                <h5 class="card-rep-titulo">Brasil é o 5º país que mais gera e-lixo no mundo</h5>
+                                <p class="card-rep-resumo">
+                                    2º nas Américas, atrás apenas dos EUA. Metais tóxicos como chumbo e mercúrio contaminam solo e água quando descartados incorretamente.
+                                </p>
+                                <span class="card-rep-link">
+                                    Ler reportagem <i class="bi bi-arrow-up-right"></i>
+                                </span>
+                            </a>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div class="carousel-item">
+                            <a href="https://www.state.is/posts/lixo-eletronico-no-brasil"
+                               target="_blank" rel="noopener noreferrer"
+                               class="card-reportagem">
+                                <div class="card-rep-icone card-rep-icone--amarelo">
+                                    <i class="bi bi-exclamation-triangle-fill"></i>
+                                </div>
+                                <div class="card-rep-tag">ONU · Relatório Global 2024</div>
+                                <h5 class="card-rep-titulo">E-lixo cresce 5× mais rápido que a reciclagem no mundo</h5>
+                                <p class="card-rep-resumo">
+                                    Em 2022 foram 62 milhões de toneladas geradas globalmente — equivale a 7,7 kg por pessoa. Apenas 22% foi coletado e reciclado corretamente.
+                                </p>
+                                <span class="card-rep-link">
+                                    Ler reportagem <i class="bi bi-arrow-up-right"></i>
+                                </span>
+                            </a>
+                        </div>
+
+                        <!-- Card 4 -->
+                        <div class="carousel-item">
+                            <a href="https://revista.istoedinheiro.com.br/lixo-eletronico-pode-virar-lucro-em-2025"
+                               target="_blank" rel="noopener noreferrer"
+                               class="card-reportagem">
+                                <div class="card-rep-icone card-rep-icone--verde">
+                                    <i class="bi bi-arrow-repeat"></i>
+                                </div>
+                                <div class="card-rep-tag">IstoÉ Dinheiro · 2025</div>
+                                <h5 class="card-rep-titulo">Lixo eletrônico pode virar lucro com logística reversa</h5>
+                                <p class="card-rep-resumo">
+                                    A logística reversa transforma resíduos em matéria-prima valiosa, movimentando ouro, prata e cobre que seriam perdidos em aterros.
+                                </p>
+                                <span class="card-rep-link">
+                                    Ler reportagem <i class="bi bi-arrow-up-right"></i>
+                                </span>
+                            </a>
+                        </div>
+
+                    </div><!-- /.carousel-inner -->
+
+                    <!-- Controles prev / next -->
+                    <button class="carousel-control-prev carrossel-ctrl" type="button"
+                            data-bs-target="#carrosselReportagens" data-bs-slide="prev">
+                        <i class="bi bi-chevron-left"></i>
+                    </button>
+                    <button class="carousel-control-next carrossel-ctrl carrossel-ctrl--next" type="button"
+                            data-bs-target="#carrosselReportagens" data-bs-slide="next">
+                        <i class="bi bi-chevron-right"></i>
+                    </button>
+
+                </div><!-- /#carrosselReportagens -->
+            </div><!-- /.col-lg-6 carrossel -->
 
         </div>
     </div>
 </section>
 
-    <!-- POR QUE RECICLAR -->
+<!-- ===================== POR QUE RECICLAR ===================== -->
 <section id="por-que" class="secao-clara">
     <div class="container">
-
         <h2 class="titulo-secao text-center">Por que Reciclar E-Lixo?</h2>
         <p class="subtitulo-secao text-center">
-            O lixo eletrônico é um dos resíduos que mais cresce no mundo. 
+            O lixo eletrônico é um dos resíduos que mais cresce no mundo.
             Descartar corretamente faz toda a diferença.
         </p>
 
@@ -98,7 +189,7 @@
                 <div class="card-info text-center">
                     <i class="bi bi-exclamation-triangle-fill icone-card"></i>
                     <h5>Substâncias Tóxicas</h5>
-                    <p>Equipamentos eletrônicos contêm chumbo, mercúrio e cádmio 
+                    <p>Equipamentos eletrônicos contêm chumbo, mercúrio e cádmio
                     que contaminam o solo e a água quando descartados incorretamente.</p>
                 </div>
             </div>
@@ -107,7 +198,7 @@
                 <div class="card-info text-center">
                     <i class="bi bi-arrow-repeat icone-card"></i>
                     <h5>Materiais Recuperáveis</h5>
-                    <p>Ouro, prata, cobre e alumínio presentes nos eletrônicos 
+                    <p>Ouro, prata, cobre e alumínio presentes nos eletrônicos
                     podem ser recuperados e reutilizados na indústria.</p>
                 </div>
             </div>
@@ -116,7 +207,7 @@
                 <div class="card-info text-center">
                     <i class="bi bi-globe-americas icone-card"></i>
                     <h5>Impacto Global</h5>
-                    <p>O Brasil é um dos maiores geradores de lixo eletrônico 
+                    <p>O Brasil é um dos maiores geradores de lixo eletrônico
                     da América Latina. Cada atitude conta para mudar esse cenário.</p>
                 </div>
             </div>
@@ -125,10 +216,9 @@
     </div>
 </section>
 
-    <!-- COMO DESCARTAR -->
+<!-- ===================== COMO DESCARTAR ===================== -->
 <section id="como-descartar" class="secao-escura">
     <div class="container">
-
         <h2 class="titulo-secao text-center">Como Descartar seu E-Lixo?</h2>
         <p class="subtitulo-secao text-center">
             Simples, rápido e responsável. Veja o caminho certo!
@@ -136,63 +226,64 @@
 
         <div class="row mt-5 g-4">
 
-    <!-- Passos 1, 2 e 3 na mesma linha -->
-    <div class="col-12">
-        <div class="row g-4">
+            <!-- Passos 1, 2 e 3 -->
+            <div class="col-12">
+                <div class="row g-4">
 
-            <div class="col-md-4">
-                <div class="card-passo text-center">
-                    <div class="numero-passo">1</div>
-                    <span class="icone-passo">💻</span>
-                    <h5>Separe o E-Lixo</h5>
-                    <p>Reúna celulares, cabos, computadores e outros eletrônicos 
-                    que não usa mais.</p>
+                    <div class="col-md-4">
+                        <div class="card-passo text-center">
+                            <div class="numero-passo">1</div>
+                            <span class="icone-passo">💻</span>
+                            <h5>Separe o E-Lixo</h5>
+                            <p>Reúna celulares, cabos, computadores e outros eletrônicos
+                            que não usa mais.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card-passo text-center">
+                            <div class="numero-passo">2</div>
+                            <span class="icone-passo">📍</span>
+                            <h5>Localize um Ponto</h5>
+                            <p>Use nosso mapa para encontrar o ponto de coleta
+                            mais próximo de você em Atibaia.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card-passo text-center">
+                            <div class="numero-passo">3</div>
+                            <span class="icone-passo">🚛</span>
+                            <h5>Leve ao Local</h5>
+                            <p>Entregue seus eletrônicos no ponto de coleta.
+                            É gratuito e sem burocracia.</p>
+                        </div>
+                    </div>
+
                 </div>
             </div>
 
-            <div class="col-md-4">
-                <div class="card-passo text-center">
-                    <div class="numero-passo">2</div>
-                    <span class="icone-passo">📍</span>
-                    <h5>Localize um Ponto</h5>
-                    <p>Use nosso mapa para encontrar o ponto de coleta 
-                    mais próximo de você em Atibaia.</p>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="card-passo text-center">
-                    <div class="numero-passo">3</div>
-                    <span class="icone-passo">🚛</span>
-                    <h5>Leve ao Local</h5>
-                    <p>Entregue seus eletrônicos no ponto de coleta. 
-                    É gratuito e sem burocracia.</p>
+            <!-- Passo 4 — destaque -->
+            <div class="col-12">
+                <div class="card-passo text-center card-passo-destaque">
+                    <div class="numero-passo">4</div>
+                    <span class="icone-passo">♻️</span>
+                    <h5>Reciclagem Segura</h5>
+                    <p>Os materiais são destinados corretamente,
+                    protegendo o meio ambiente e a saúde de todos.</p>
                 </div>
             </div>
 
         </div>
     </div>
+</section>
 
-    <!-- Passo 4 sozinho e mais largo -->
-    <div class="col-12">
-        <div class="card-passo text-center card-passo-destaque">
-            <div class="numero-passo">4</div>
-            <span class="icone-passo">♻️</span>
-            <h5>Reciclagem Segura</h5>
-            <p>Os materiais são destinados corretamente, 
-            protegendo o meio ambiente e a saúde de todos.</p>
-        </div>
-    </div>
-
-</div>
-
-    <!-- DOE OU DESCARTE -->
+<!-- ===================== DOE OU DESCARTE ===================== -->
 <section id="doe-descarte" class="secao-clara">
     <div class="container">
-
         <h2 class="titulo-secao text-center">Doe ou Descarte</h2>
         <p class="subtitulo-secao text-center">
-            Tem eletrônicos sem uso? Encontre o ponto de coleta 
+            Tem eletrônicos sem uso? Encontre o ponto de coleta
             mais próximo de você em Atibaia e faça a diferença!
         </p>
 
@@ -202,37 +293,43 @@
             <div class="col-lg-5 text-center">
                 <i class="bi bi-heart-fill icone-doe"></i>
                 <h4 class="mt-3">Sua doação transforma!</h4>
-                <p>Eletrônicos doados podem ser recondicionados e 
-                destinados a escolas e famílias de baixa renda, 
+                <p>Eletrônicos doados podem ser recondicionados e
+                destinados a escolas e famílias de baixa renda,
                 promovendo inclusão digital em Atibaia.</p>
-                <a href="https://www.google.com/maps/search/coleta+lixo+eletronico+Atibaia+SP" 
-                   target="_blank" 
+                <a href="https://www.google.com/maps/search/coleta+lixo+eletronico+Atibaia+SP"
+                   target="_blank"
+                   rel="noopener noreferrer"
                    class="btn btn-hero mt-3">
                     <i class="bi bi-geo-alt-fill"></i>
                     Quero Doar ou Descartar — Ver no Mapa
                 </a>
             </div>
 
-            <!-- Imagem decorativa no lugar do mapa -->
-    <div class="col-lg-7 text-center">
-<i class="bi bi-map icone-mapa-placeholder"></i>
-<h5>Encontre o ponto mais próximo</h5>
-<p class="mt-2 mb-0">Atibaia conta com diversos pontos de coleta de lixo eletrônico. Clique no botão e localize o mais próximo de você!</p>
-</div>
-    <!-- FOOTER -->
+            <!-- Placeholder do mapa -->
+            <div class="col-lg-7 text-center">
+                <i class="bi bi-map icone-mapa-placeholder"></i>
+                <h5>Encontre o ponto mais próximo</h5>
+                <p class="mt-2 mb-0">
+                    Atibaia conta com diversos pontos de coleta de lixo eletrônico.
+                    Clique no botão e localize o mais próximo de você!
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
 <footer id="rodape" class="footer">
     <div class="container">
-
         <div class="row g-4">
 
-            <!-- Logo e descrição -->
             <div class="col-md-4">
                 <h5><i class="bi bi-recycle"></i> Descarte Certo</h5>
-                <p>Conscientizando Atibaia sobre o descarte 
+                <p>Conscientizando Atibaia sobre o descarte
                 correto de lixo eletrônico.</p>
             </div>
 
-            <!-- Links rápidos -->
             <div class="col-md-4 text-center">
                 <h6>Links Rápidos</h6>
                 <ul class="list-unstyled">
@@ -243,10 +340,9 @@
                 </ul>
             </div>
 
-            <!-- Créditos -->
             <div class="col-md-4 text-center">
                 <h6>Projeto Acadêmico</h6>
-                <p>Desenvolvido para a disciplina de 
+                <p>Desenvolvido para a disciplina de
                 Atividades Extensionistas<br>
                 UNINTER — 2026</p>
             </div>
@@ -257,15 +353,13 @@
         <p class="text-center mb-0">
             © 2026 Descarte Certo — Todos os direitos reservados.
         </p>
-
     </div>
 </footer>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-    <!-- JS próprio -->
-    <script src="script.js"></script>
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<!-- JS próprio -->
+<script src="js/script.js"></script>
 
 </body>
 </html>
